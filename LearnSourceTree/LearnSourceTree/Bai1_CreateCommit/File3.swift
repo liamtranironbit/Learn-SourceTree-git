@@ -10,6 +10,7 @@ import SwiftUI
 struct File3: View {
     var body: some View {
         Text("Create File 3")
+        Text("Bai 2 commit3")
     }
 }
 
