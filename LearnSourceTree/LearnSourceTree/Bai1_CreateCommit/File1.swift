@@ -11,5 +11,6 @@ struct FileOne: View {
     var body: some View {
         Text("Hello, World! with file One")
         Text("Bai 2 commit 1")
+        Text("Edit file for conflict")
     }
 }
