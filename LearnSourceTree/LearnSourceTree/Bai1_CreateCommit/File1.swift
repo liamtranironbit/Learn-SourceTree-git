@@ -11,6 +11,10 @@ struct FileOne: View {
     var body: some View {
         Text("Hello, World! with file One")
         Text("Bai 2 commit 1")
+<<<<<<< HEAD
         Text("Edit file for conflict")
+=======
+        Text("Edit for conflict")
+>>>>>>> Bai2_Branch_2.2
     }
 }
