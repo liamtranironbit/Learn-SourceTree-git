@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showDetail = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack(spacing: 20) {
+                
+                Text("Welcome to Git Practice")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                Button("Show Detail") {
+                    showDetail = true
+                }
+                .buttonStyle(.borderedProminent)
+                
+                NavigationLink(
+                    destination: DetailView(),
+                    isActive: $showDetail
+                ) {
+                    EmptyView()
+                }
+            }
+            .navigationTitle("Home")
         }
-        .padding()
     }
 }
 
