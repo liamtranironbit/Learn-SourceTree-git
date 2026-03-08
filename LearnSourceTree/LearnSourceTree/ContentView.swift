@@ -18,6 +18,7 @@ struct ContentView: View {
                 Text("Welcome to Git Practice")
                     .font(.title)
                     .fontWeight(.bold)
+                Text("Show DetailView")
                 
                 Button("Show Detail") {
                     showDetail = true
