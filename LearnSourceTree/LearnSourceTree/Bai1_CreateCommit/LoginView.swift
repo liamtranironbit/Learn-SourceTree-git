@@ -11,6 +11,7 @@ struct LoginView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @StateObject var viewModel: LoginViewModel
     
     var body: some View {
         VStack(spacing: 20) {
@@ -38,7 +39,11 @@ struct LoginView: View {
             }
             .padding(.horizontal)
             
-            Button(action: loginAction) {
+            Button(action: {
+                Task {
+                       await viewModel.login()
+                   }
+            }) {
                 Text("Login")
                     .frame(maxWidth: .infinity)
                     .padding()
@@ -65,5 +70,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    LoginView(viewModel: LoginViewModel())
 }
