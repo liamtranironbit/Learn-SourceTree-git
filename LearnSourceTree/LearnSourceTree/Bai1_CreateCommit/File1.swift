@@ -12,5 +12,8 @@ struct FileOne: View {
         Text("Hello, World! with file One")
         Text("Bai 2 commit 1")
         Text("Tao them file de conflict")
+        Text("Edit file for conflict")
+        Text("Edit for conflict")
+
     }
 }
